@@ -1,0 +1,4 @@
+id,title,description,duration,maxcapacity,deleted
+1,"Kids Disco","Lorem ipsum ...",90,100,0
+2,"Craft Sessions","Lorem ipsum ...",120,20,0
+3,"Recently Deleted Event","Lorem ipsum ...",60,45,1
