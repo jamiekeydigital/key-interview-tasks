@@ -1,9 +1,5 @@
 # SQL Relation Task
-This is a simple task to get a result set from three related tables. 
-
-Each row in the result set would include the information to create various indexed objects, in different languages when read.
-
-This result could be read directly as a query, or could be used as the basis for a db view.
+This is a simple task to get a result set from three related tables. This can be completed in most SQL dialects such as MySQL, PostgreSQL, MS SQL Server. The test data is supplied as MySQL format, and uses datetime columns so 'can' be acheived in SQLite but would need timestamps converted to epoch numerics.
 
 ## Context of data
 The following data records are events/activities on a holiday park. It has three tables :
@@ -43,8 +39,17 @@ Logical deletion for event records : deleted flag is either 0/1 (1 for deleted)
 #### Supplied Data
 These three tables have been supplied in a mysql dump, which can be ported to other sql dialects, or as three .csv files.
 
+[SQL Dump](mysqldump.sql)
+[Events CSV](site_event.csv)
+[Performances CSV](site_performance.csv)
+[Venues CSV](site_venue.csv)
+
 ## Task 1
-The following dataset (also found in results.csv) should be produced from a single query
+**Write a single select query to produce following dataset (also found in [results.csv](results.csv))**
+
+Each row in the result set would include the information to create various indexed objects, in different languages when read.
+
+This result could be read directly as a query, or could be used as the basis for a db view.
 
 |id|eventid|performancetime|venueid|sold|available|maxcapacity|soldout|eventtitle|description|duration|venuename|
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -57,17 +62,17 @@ The following dataset (also found in results.csv) should be produced from a sing
 |4|1|2019-12-6 18:00:00|2|25|75|100|0|Kids Disco|Lorem ipsum...|90|Seaside Stage|
 |5|1|2019-12-7 18:00:00|2|65|35|100|0|Kids Disco|Lorem ipsum...|90|Seaside Stage|
 
-**Notes :** Results are ordered by Event Title, then Performance Time. Both the 'available', and 'soldout' columns are calculated. Soldout, is a 0/1 boolean, Available is an integer. This result set does NOT include any performances related to the event with the ID 3, as it has recently been deleted. 
+**Notes :** Results are ordered by *Event Title*, then *Performance Time*. Both the *available*, and *soldout* columns are calculated. *Soldout*, is a 0/1 boolean, *Available* is an integer. This result set does **NOT** include any performances related to the events marked as deleted
 
 ## Task 2
 Imagine these tables were attached to an active service, or API which recieves and inserts new performances. On finishing the new data insertion, it should then housekeep old performances from the site_performances table.
 
-**Write a sql statement which will delete any performances whose event is marked as deleted, or are more than 30 days past their performancetime**
+**Write a sql statement which will delete any performances whose event is marked as deleted, or are more than 30 days past their performance time**
 
 ## Task 3
-Imagine this data was NOT being read by another code set, and was being used to export as a report.
+Imagine this data was NOT being read by another code set, and was being used to export as a report. It may need some additional columns to give context to the data.
 
-**Add another column to your task 1 query to add a 'finishtime' datetime calculated column, which added the event duration to the performance's performance time**
+**Add another column to your task 1 query to add a 'finishtime' datetime calculated column, which adds the event duration to the row's performance time**
 
 ## Task 4
 **Using the three tables of data write 2 or 3 handy queries, functions, or views of your choice**

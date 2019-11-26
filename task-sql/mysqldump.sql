@@ -1,18 +1,3 @@
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : AMPPS
-Source Server Version : 50637
-Source Host           : localhost:3306
-Source Database       : interview_tasks
-
-Target Server Type    : MYSQL
-Target Server Version : 50637
-File Encoding         : 65001
-
-Date: 2019-11-25 21:02:56
-*/
-
 SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 -- Table structure for `site_event`
@@ -33,9 +18,9 @@ CREATE TABLE `site_event` (
 -- ----------------------------
 -- Records of site_event
 -- ----------------------------
-INSERT INTO site_event VALUES ('1', 'Kids Disco', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.', '90', '100', '0');
-INSERT INTO site_event VALUES ('2', 'Craft Sessions', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.', '120', '20', '0');
-INSERT INTO site_event VALUES ('3', 'Recently Deleted Event', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.', '60', '45', '1');
+INSERT INTO site_event VALUES ('1', 'Kids Disco', 'Lorem ipsum ...', '90', '100', '0');
+INSERT INTO site_event VALUES ('2', 'Craft Sessions', 'Lorem ipsum ...', '120', '20', '0');
+INSERT INTO site_event VALUES ('3', 'Recently Deleted Event', 'Lorem ipsum ...', '60', '45', '1');
 
 -- ----------------------------
 -- Table structure for `site_performance`
