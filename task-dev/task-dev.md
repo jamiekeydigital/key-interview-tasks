@@ -16,7 +16,7 @@ echo('<p>4 = 2</p>' . PHP_EOL);
 echo('<p>5 = 3</p>' . PHP_EOL);
 echo('<p>6 = 5</p>' . PHP_EOL);
 // ... etc etc
-echo('<ul>' . PHP_EOL);
+echo('</ul>' . PHP_EOL);
 ?>
 ```
 
@@ -90,7 +90,7 @@ foreach($parsedJSONArray as $placeJSON) {
     echo('<img src="family-icon.png">');
   }
   echo('<p>' . $place->categoryNames() . '</p>');
-  echo('<p><b>Opening Tiles: </b>' . $place->details() . '</p>');
+  echo('<p><b>Opening Tiles: </b>' . $place->openingTimes() . '</p>');
   echo('<p>' . $place->details() . '</p>');
   echo('</div>');
 }
